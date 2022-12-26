@@ -1,0 +1,78 @@
+@import "media";
+
+%aling-center{
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar{
+    background: rgb(33, 0, 79);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem calc((100vw - 1200px) /2);
+    z-index: 10;
+    position: relative;
+
+    @include tablet{
+        .navbar{
+            max-width: max-content;        
+        }
+    }
+
+    &_logo{
+        color: red;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 24px;
+        @extend %aling-center
+    }
+
+    &_bars{
+        opacity: 0;
+
+        @include tablet{
+            color: black;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2rem;
+        }
+        @include mobile{};
+    }
+
+    &_menu{
+        @extend %aling-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &_links{
+        color: red;
+        @extend %aling-center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0 1rem;
+
+        &:hover{
+            color: rgb(62, 248, 208);
+            transition: all 0.3s ease;
+        }
+    }
+
+
+
+}
+
+
+
+

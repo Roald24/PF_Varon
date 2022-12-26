@@ -1,0 +1,30 @@
+.card{
+    width: 200px;
+    margin: 20px;
+    background-color: rgb(93, 193, 185);
+    border: none;
+
+    p{
+        color: black;
+        &:nth-of-type(2){
+            color: black;
+        }
+    }
+
+
+
+    h2{
+        color: black;
+    }
+
+    &:hover{
+
+        p{
+            color: chartreuse;
+        }
+        h2{
+            color: rgb(209, 36, 36);
+        }
+    }
+
+}
